@@ -1,5 +1,5 @@
 angular.module('myApp.controllers', [])
-.controller('MainController', ['$scope', '$http', function($scope, $http){
+.controller('MainController', function($scope, $http){
   $scope.name = "Brett";
   $http({
     method: 'JSONP',
@@ -7,5 +7,21 @@ angular.module('myApp.controllers', [])
   }).success(function(data, status, headers, config) {
     $scope.redditStuff = data.data.children;
   });
-}]);
+}).controller('PostController', function($scope){
+  $scope.votes = 0;
+  $scope.downvote = function(){
+    $scope.votes--;
+  };
+  $scope.upvote = function(){
+    $scope.votes++;
+  };
+}).controller('AltController', function($scope){
+  $scope.votes = 0;
+  $scope.downvote = function(){
+    $scope.votes--;
+  };
+  $scope.upvote = function(){
+    $scope.votes++;
+  };
+});
 

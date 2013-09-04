@@ -1,3 +1,9 @@
 <h2>Home template</h2>
 
-<!-- Fill in our news data here -->
+<div ng-controller='MainController'>
+<h1>{{name}}</h1>
+
+<ul ng-repeat='post in redditStuff | orderBy:"votes":true'>
+  <li ng-controller='PostController'><a href="{{post.data.url}}">{{post.data.title}}</a><button ng-click='upvote()'>Upvote</button><button ng-click='downvote()'>Downvote</button> Votes: {{votes}}</li>
+</ul>
+</div>
