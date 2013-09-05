@@ -1,0 +1,8 @@
+<ul>
+  <li ng-repeat='post in redditStuff' ng-controller='PostController'>
+    <a href='{{post.data.url}}'>{{post.data.title}}</a>
+    <button ng-click='upvote()'>Upvote</button>
+    <button ng-click='downvote()'>Downvote</button>
+    Votes: {{votes}}
+  </li>
+</ul>

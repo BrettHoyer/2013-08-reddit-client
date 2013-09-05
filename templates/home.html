@@ -1,9 +1,12 @@
 <h2>Home template</h2>
 
 <div ng-controller='MainController'>
-<h1>{{name}}</h1>
+<h1>{{name}}</h1><div> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+<div reddit-list>
 
-<ul ng-repeat='post in redditStuff | orderBy:"votes":true'>
-  <li ng-controller='PostController'><a href="{{post.data.url}}">{{post.data.title}}</a><button ng-click='upvote()'>Upvote</button><button ng-click='downvote()'>Downvote</button> Votes: {{votes}}</li>
-</ul>
 </div>
